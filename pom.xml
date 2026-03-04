@@ -29,7 +29,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>  <!-- web, не webmvc -->
+            <artifactId>spring-boot-starter-web</artifactId> 
         </dependency>
 
         <dependency>
@@ -99,7 +99,7 @@
                             <artifactId>mapstruct-processor</artifactId>
                             <version>${mapstruct.version}</version>
                         </path>
-                        <!-- Для совместной работы Lombok и MapStruct -->
+                  
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok-mapstruct-binding</artifactId>
