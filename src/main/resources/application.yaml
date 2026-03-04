@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: JsonView
+
+  datasource:
+    url: jdbc:postgresql://localhost:5435/order_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  jackson:
+    serialization:
+      indent_output: true
+    default-property-inclusion: non_null
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+logging:
+  level:
+    ru.itk.jsonview: DEBUG
+    org.springframework.web: INFO
+    org.hibernate: ERROR
