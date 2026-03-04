@@ -131,7 +131,7 @@ class UserControllerTest {
         mockMvc.perform(get("/api/v1/user/users")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray())  // проверяем что это массив
+                .andExpect(jsonPath("$").isArray())
                 .andExpect(jsonPath("$.length()").value(1))
                 .andExpect(jsonPath("$[0].id").value(testUserId.toString()))
                 .andExpect(jsonPath("$[0].firstname").value("Иван"))
